@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.willuhn.de/schema/jameica-plugin"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.willuhn.de/schema/jameica-plugin http://www.willuhn.de/schema/jameica-plugin-1.2.xsd"
-	name="jzeit" version="0.0.1-devel" class="de.hoogi.jzeit.JZeit">
+	name="jzeit" version="0.0.1-devel" class="de.hoogi.jzeit.JZeitPlugin">
 
 	<description>Zeiterfassung für Jameica</description>
 	<license>GPL - http://www.gnu.org/copyleft/gpl.html</license>
@@ -17,7 +17,7 @@
 
 	<navigation>
 		<item name="JZeit" 
-			icon-close="bricks.png"
+			icon-close="clock.png"
 			action="de.hoogi.jzeit.gui.action.Welcome" />
 	</navigation>
 

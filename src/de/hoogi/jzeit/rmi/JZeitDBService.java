@@ -2,10 +2,11 @@ package de.hoogi.jzeit.rmi;
 
 import java.rmi.RemoteException;
 
+import de.willuhn.datasource.rmi.DBService;
 import de.willuhn.jameica.plugin.Version;
 import de.willuhn.jameica.system.Settings;
 
-public interface JZeitDBService extends de.willuhn.datasource.rmi.DBService
+public interface JZeitDBService extends DBService
 {
 	/**
 	 * Einstellungen fuer die DB-Services.

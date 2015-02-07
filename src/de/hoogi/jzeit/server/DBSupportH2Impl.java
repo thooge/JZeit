@@ -40,7 +40,7 @@ public class DBSupportH2Impl extends AbstractDBSupportImpl
 
 	@Override
 	public String getScriptPrefix() throws RemoteException {
-		return "h2";
+		return "h2-";
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class DBSupportH2Impl extends AbstractDBSupportImpl
 	{
 		String url = "jdbc:h2:" 
 			+ Application.getPluginLoader().getPlugin(JZeitPlugin.class).getResources().getWorkPath()
-			+ "/h2db/jminiplugin";
+			+ "/h2db/jzeit";
 		return url;
 	}
 
@@ -61,6 +61,7 @@ public class DBSupportH2Impl extends AbstractDBSupportImpl
 	@Override
 	public String getJdbcPassword()
 	{
+	  // TODO Verfahren von Hibiscus übernehmen
 		return "jzeit";
 	}
 

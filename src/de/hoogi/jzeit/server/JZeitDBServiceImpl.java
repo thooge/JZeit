@@ -16,6 +16,9 @@ import de.willuhn.jameica.plugin.Version;
 import de.willuhn.jameica.system.Application;
 import de.willuhn.logging.Logger;
 import de.willuhn.sql.ScriptExecutor;
+import de.willuhn.sql.version.UpdateProvider;
+import de.willuhn.sql.version.Updater;
+import de.willuhn.util.ApplicationException;
 import de.willuhn.util.ProgressMonitor;
 
 public class JZeitDBServiceImpl extends DBServiceImpl implements JZeitDBService
@@ -60,7 +63,7 @@ public class JZeitDBServiceImpl extends DBServiceImpl implements JZeitDBService
 	@Override
 	public String getName()
 	{
-		return "Datenbank-Service für JMiniPlugin";
+		return "Datenbank-Service für JZeitPlugin";
 	}
 
 	@Override
@@ -92,6 +95,18 @@ public class JZeitDBServiceImpl extends DBServiceImpl implements JZeitDBService
 	{
 		return this.driver.getJdbcUsername();
 	}
+
+  public void checkConsistency() throws RemoteException, ApplicationException
+  {
+    Logger.info("init update");
+// TODO Welches Updateverfahren genommen wird, aus Hibiscus, JVerein oder ein ganz anderes
+//      muß hier noch geklärt werden.
+//    UpdateProvider provider = new JZeitUpdateProvider(getConnection(), VersionUtil.getVersion(this,"db"));
+//    Updater updater = new Updater(provider,  "iso-8859-1");
+//    updater.execute();
+    Logger.info("dummy placeholder");
+    Logger.info("updates finished");
+  }
 
 	@Override
 	public void install() throws RemoteException

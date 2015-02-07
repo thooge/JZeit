@@ -12,4 +12,12 @@ import de.hoogi.jzeit.server.JZeitDBServiceImpl;
 
 public class JZeitPlugin extends AbstractPlugin {
 
+  /**
+   * @see de.willuhn.jameica.plugin.AbstractPlugin#init()
+   */
+  public void init() throws ApplicationException
+  {
+    Logger.info("starting init process for jzeit");
+  }
+
 }
