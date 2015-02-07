@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugin xmlns="http://www.willuhn.de/schema/jameica-plugin"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.willuhn.de/schema/jameica-plugin http://www.willuhn.de/schema/jameica-plugin-1.2.xsd"
+	name="jzeit" version="0.0.1-devel" class="de.hoogi.jzeit.JZeit">
+
+	<description>Zeiterfassung für Jameica</description>
+	<license>GPL - http://www.gnu.org/copyleft/gpl.html</license>
+
+	<requires jameica="2.6.0+" />
+
+	<classfinder>
+		<include>jzeit\.jar</include>
+		<include>.*\.class</include>
+	</classfinder>
+
+	<navigation>
+		<item name="JZeit" 
+			icon-close="bricks.png"
+			action="de.hoogi.jzeit.gui.action.Welcome" />
+	</navigation>
+
+	<services>
+		<service name="jzeitdb" depends="" autostart="true"
+			class="de.hoogi.jzeit.rmi.JZeitDBService" />
+	</services>
+
+</plugin>
